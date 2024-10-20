@@ -7,6 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "default",
+      securityLevel: "strict",
+      class: "metamermaid"  <!-- Tells Mermaid.js to look for your custom class -->
+    });
+  </script>
     <style>
         body {
             font-family: 'Libre Baskerville', serif;
@@ -52,7 +61,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Approach Note for Creating LLM</h1>
+        <h1>Approach Note for Creating LLM for the Agriculture Industry</h1>
         <h2>Problems to be solved in agricultural sector:</h2>
         <p>Farmers form the backbone of rural India, and the prosperity of the nation hinges on their well-being. In India,our food providers are pushed to the brink of losing their lives due to certain existing hardships  and financial burdens alongside.When the entire agricultural ecosystem suffers,it disturbs the stability of food supply and rural livelihoods. Despite their critical role for the nation, we were unable to think of any centralized promising solution for farmers until LLMs came to existence.</p>
 
@@ -75,6 +84,41 @@
             <li>Pest Infestation</li>
             <li>Location of farmlands (Mountains, Plateaus, Plains & River Basins)</li>
         </ul>
+         <div class="metamermaid">
+    graph TD
+      A[Personalized Suggestions] --> B[Input]
+      B --> C[Location]
+      B --> D[Area-under-crop cover]
+      B --> E[PAN]
+      B --> F[Aadhar]
+      B --> G[Govt. subsidies status]
+      B --> H[Tools/Machinery available]
+      B --> I[Type of Crop]
+      B --> J[Crop name]
+      B --> K[Seed quality (A/B/C)]
+      B --> L[Duration]
+
+      L --> M[Output: Suggest crop without being affected by calamities]
+      M --> N[Location/Region]
+      M --> O[Region under crop cover]
+      M --> P[Weather conditions (API data)]
+
+      P --> Q[Suitable crops to be cultivated]
+      Q --> R[Satellite imagery + Machine learning]
+      Q --> S[Analyzing land & prediction of calamities]
+
+      T[Soil Profile] --> U[Soil Chemistry]
+      U --> V[Land History for Crop Cover]
+
+      V --> W[Output: Quality of nutrients in soil]
+      W --> X[Suggest farming methods to preserve nutrients]
+
+      X --> Y[PAN + Aadhar]
+      Y --> Z[Financial data + Government Loans]
+
+      Z --> AA[Help farmers get govt subsidies]
+      Z --> AB[Provide loans if process is followed]
+  </div>
 
         <h3>Factors Affecting Farmers in India</h3>
         <div class="mermaid">
